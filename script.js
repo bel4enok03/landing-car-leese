@@ -1,4 +1,4 @@
-//input
+// input
 // const totalCost = document.getElementById ("total-cost");
 // const totalPercent = document.getElementById ("total-percent");
 // const totalPeriod = document.getElementById ("total-period");
@@ -39,14 +39,14 @@
 
 //amountOfLeasePaymant = (costOfLeeseObject - interestRate) / (1-1/(1 ++ costOfLeeseObject)2);
 
-$(function(){
+/*$(function(){
     const maxRange = 6000000;
     $('.form-range').on('input',function(){
         let trackWidth = $(this).width();
         console.log(trackWidth);
         let rate = trackWidth / maxRange;
         let value = $(this).val()*rate;
-        if (value == 71.166){
+        if (value == 71.16666666666667){
             value = 0;
         }
         console.log(value);
@@ -55,3 +55,33 @@ $(function(){
         
     })
 })
+*/
+
+$(function(){
+    $('.form-range').on('input',function(){
+        let maxRange = parseInt($(this).attr('max'));
+        let minRange = parseInt($(this).attr('min'));
+        let value = parseInt($(this).val());
+        let percent = ((value - minRange) / (maxRange - minRange) * 100);
+
+        $(this).siblings('.track').css('width',percent + '%');
+    })
+});
+
+
+
+// let $slider = $('.form-range');
+// let $fill = $('.track');
+
+// function setBar() {
+//     let min = parseInt($slider.attr('min'));
+//     let max = parseInt($slider.attr('max'));
+//     let value = parseInt($slider.val());
+//     let percent = ((value - min) / (max - min) * 100);
+
+//     $fill.css('width', percent + '%');
+// }
+
+// $slider.on('input', setBar);
+
+// setBar()
