@@ -1,0 +1,97 @@
+.form-range {
+  width: 100%;
+  height: 2px;
+  padding: 0;
+  background-color: #F3F3F4;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-range:focus {
+  outline: none;
+}
+
+.form-range:focus::-webkit-slider-thumb {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-range:focus::-moz-range-thumb {
+  box-shadow: none;
+}
+
+.form-range:focus::-ms-thumb {
+  box-shadow: none;
+}
+
+.form-range::-moz-focus-outer {
+  border: 0;
+}
+
+.form-range::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  background: #FF9514;
+  border: none;
+  border-radius: 50%;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.form-range::-ms-thumb {
+  width: 200px;
+  height: 10px;
+  margin-top: 0;
+  background-color: red;
+  border: 1px solid green;
+  appearance: none;
+}
+
+.form-range::-ms-track {
+  width: 200px;
+  height: 10px;
+  color: transparent;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 5px;
+}
+
+.form-range::-ms-fill-lower {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.form-range::-ms-fill-upper {
+  margin-right: 15px;
+  background-color: red;
+  border-radius: 8px;
+}
+
+.form-range:disabled {
+  pointer-events: none;
+}
+
+.track {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #FF9514;
+  z-index: 99;
+  height: 2px;
+  width: 0px;
+  pointer-events: none;
+  border: none;
+  left: 0;
+}
+
+.input-range-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.calculator__content-title {
+    width: 753px;
+    height: 98px;
+    margin-left: 47px;
+    margin-top: 213px;
+}
+
+.calculator__content-title h1 {
+    /* font: 54px ‘Nekst-Black’, sans-serif; */
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%;
+    color: #111111;
+}
+
+.calculator__body {
+    display: flex;
+    margin-top: 32px;
+    margin-left: 47px;
+}
+
+.calculator__body-wrapper {
+    margin-right: 32px;
+}
+
+.calculator__body .title {
+    margin-bottom: 24px;
+    color: #575757;
+    /* font: 16px ‘Gilroy’, sans-serif; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.calculator__body #total-cost, #total-percent, #total-period  {
+    width: 427px;
+    height: 68px;
+    background: #F3F3F4;
+    color: #575757;
+    /* font: 32px ‘Nekst-Black’, sans-serif; */
+    font-weight: 900;
+    line-height: 36px;
+    border-radius: 16px;
+    position: relative;
+    border: none;
+    font-style: normal;
+}
+
+/* input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 5px;
+    padding: 0;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+}  */
+
+/*Chrome thumb*/
+/* input[type="range"]::-webkit-slider-thumb { */
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #FF9514;
+    /* background: #FF9514; */
+/* } */ 
+
+
+/*Mozilla thumb*/
+
+/* input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #FF9514;
+} */
+
+.calculator__final {
+    display: flex;
+    margin-top: 44px;
+    margin-left: 47px;
+}
+
+.calculator__final-item {
+    width: 279px;
+    height: 81px;
+    margin-right: 180px;
+}
+
+.calculator__final-item .title {
+    width: 180px;
+    height: 24px;
+    /* font: 16px ‘Gilroy’, sans-serif; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 191px;
+    height: 24px;
+    color: #575757;
+    margin-bottom: 8px;
+}
+
+.calculator__final-item #amount-of-lease, #monthly-paymant {
+    color: #333333;
+    /* font: 54px ‘Nekst-Black’, sans-serif; */
+    font-style: normal;
+    font-weight: 900;
+    line-height: 90%;
+}
+
+.btn {
+    width: 426px;
+    height: 68px;
+    background: #FF9514;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 16px 12px;
+    color: #FFFFFF;
+    /* font: 30px ‘Nekst-Black’, sans-serif; */
+    font-style: normal;
+    font-weight: 900;
+    line-height: 36px;
+}
