@@ -1,43 +1,3 @@
-// input
-// const totalCost = document.getElementById ("total-cost");
-// const totalPercent = document.getElementById ("total-percent");
-// const totalPeriod = document.getElementById ("total-period");
-
-// // input range
-// const totalCostRange = document.getElementById ("total-cost-range");
-// const totalPercentRange = document.getElementById ("total-percent-range");
-// const totalPeriodRange = document.getElementById ("total-period-range");
-
-// // final results
-// const amountOfLease = document.getElementById ("amount-of-lease");
-// const monthlyPaymant = document.getElementById ("monthly-paymant");
-
-// //All ranges
-// const inputsRange = document.querySelectorAll (".input-range");
-
-
-// const assignValue = () => {
-//     totalCost.value = totalCostRange.value;
-//     totalPercent.value = totalPercentRange.value;
-//     totalPeriod.value = totalPeriodRange.value;
-// }
-
-// assignValue ()
-
-// for (let input of inputsRange){
-//     input.addEventListener ("input", () => {
-//         assignValue ();
-//     })
-// }
-
-
-// S = (P–р)/(1–1/(1+р)2) - где S — сумма лизинговых платежей; P — стоимость лизингообъекта; р — процентная ставка.
-
-//let amountOfLeasePaymant;
-//let costOfLeeseObject;
-//let interestRate;
-
-//amountOfLeasePaymant = (costOfLeeseObject - interestRate) / (1-1/(1 ++ costOfLeeseObject)2);
 
 /*$(function(){
     const maxRange = 6000000;
@@ -57,19 +17,6 @@
 })
 */
 
-$(function(){
-    $('.form-range').on('input',function(){
-        let maxRange = parseInt($(this).attr('max'));
-        let minRange = parseInt($(this).attr('min'));
-        let value = parseInt($(this).val());
-        let percent = ((value - minRange) / (maxRange - minRange) * 100);
-
-        $(this).siblings('.track').css('width',percent + '%');
-    })
-});
-
-
-
 // let $slider = $('.form-range');
 // let $fill = $('.track');
 
@@ -85,3 +32,58 @@ $(function(){
 // $slider.on('input', setBar);
 
 // setBar()
+
+$(function(){
+    $('.form-range').on('input',function(){
+        let maxRange = parseInt($(this).attr('max'));
+        let minRange = parseInt($(this).attr('min'));
+        let value = parseInt($(this).val());
+        let percent = ((value - minRange) / (maxRange - minRange) * 100);
+
+        $(this).siblings('.track').css('width',percent + '%');
+    })
+});
+
+const totalCost = document.getElementById ("total-cost");
+const totalPercent = document.getElementById ("total-percent");
+const totalPeriod = document.getElementById ("total-period");
+
+const totalCostRange = document.getElementById ("total-cost-range");
+const totalPercentRange = document.getElementById ("total-percent-range");
+const totalPeriodRange = document.getElementById ("total-period-range");
+
+
+const inputsRange = document.querySelectorAll (".input-range");
+
+const assignValue = () => {
+        totalCost.value = totalCostRange.value;
+        totalPercent.value = totalPercentRange.value;
+        totalPeriod.value = totalPeriodRange.value;
+    }
+    
+    assignValue ()
+    
+    for (let input of inputsRange){
+        input.addEventListener ("input", () => {
+            assignValue ();
+        })
+    }
+
+const percentRate = 0.035;
+
+const amountOfLease = document.getElementById ("amount-of-lease"); //Сумма договора лизинга”
+const monthlyPaymant = document.getElementById ("monthly-paymant"); //Ежемесячный платеж
+
+
+
+// Формулы расчета для полей:
+// Процентная ставка = 3.5%
+// Для поля “Первоначальный взнос”: 
+// Первоначальный взнос (в процентах) * Стоимость автомобиля
+// Для поля “Сумма договора лизинга”:
+// Первоначальный взнос + Срок кредита в месяцах * Ежемесячный платеж
+//Для поля “Ежемесячный платеж от”:
+
+//(Стоимость автомобиля - Первоначальный взнос) * ((Процентная ставка * (1 + Процентная ставка)^Срок кредита в месяцах) / ((1 + Процентная ставка)^Срок кредита в месяцах - 1)) 
+//const monthPay = (price - initial) * ((0.035 * Math.pow((1 + 0.035), months)) / (Math.pow((1 + 0.035), months) - 1));
+
