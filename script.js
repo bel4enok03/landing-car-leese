@@ -71,8 +71,6 @@ const assignValue = () => {
 
 const percentRate = 0.035;
 
-const amountOfLease = document.getElementById ("amount-of-lease"); //Сумма договора лизинга”
-const monthlyPaymant = document.getElementById ("monthly-paymant"); //Ежемесячный платеж
 
 
 
