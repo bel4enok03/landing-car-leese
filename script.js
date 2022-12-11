@@ -21,8 +21,8 @@ const totalPeriodRange = document.getElementById('total-period-range');
 
 const inputsRange = document.querySelectorAll('.input-range');
 
-let amountOfLease = document.querySelector('#amount-of-lease');
-let monthlyPaymant = document.querySelector('#monthly-paymant');
+const amountOfLease = document.querySelector('#amount-of-lease');
+const monthlyPaymant = document.querySelector('#monthly-paymant');
 
 const assignValue = () => {
 	totalCost.value = totalCostRange.value;
@@ -51,7 +51,7 @@ const assignValue = () => {
 
 };
 
-assignValue();
+
 
 for (let input of inputsRange) {
 	input.addEventListener('input', () => {
