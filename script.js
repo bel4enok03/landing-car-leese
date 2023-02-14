@@ -1,12 +1,15 @@
 // Получаем элементы из DOM
+
 const costInput = document.getElementById('total-cost');
-const costRange = document.getElementById('total-cost-range');
 const percentInput = document.getElementById('total-percent');
-const percentRange = document.getElementById('total-percent-range');
 const periodInput = document.getElementById('total-period');
-const periodRange = document.getElementById('total-period-range');
+
 const amountEl = document.getElementById('amount-of-lease');
 const paymentEl = document.getElementById('monthly-payment');
+
+const costRange = document.getElementById('total-cost-range');
+const percentRange = document.getElementById('total-percent-range');
+const periodRange = document.getElementById('total-period-range');
 
 //стили для ползунка
 const inputRanges = document.querySelectorAll('.input-range');
@@ -72,6 +75,8 @@ handleInputChange(periodInput, periodRange);
 
 // Обновляем расчеты при инициализации
 updateCalculations();
+
+
 
 // отправка данных на сервер
 const buttonEl = document.querySelector('.btn');
