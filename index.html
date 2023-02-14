@@ -5,12 +5,13 @@
 		<meta name="description" content="Рассчитайте стоимость автомобиля в лизинг, лизинг" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="scss/style.css" />
-        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-		<!-- <link href = "fonts/gilroy/stylesheet.css" rel = "stylesheet" type = "text/css" />
-    <link href = "fonts/Nekst-Black/stylesheet.css" rel = "stylesheet" type = "text/css" /> -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.min.js"
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<div class="calculator">
@@ -21,10 +22,10 @@
 				<div class="calculator__body-wrapper">
 					<div class="title">Стоимость автомобиля</div>
 					<div class="input">
-						<input type="number" id="total-cost" value="0" />
+						<input type="number" id="total-cost" value="0" min="1000000" max="6000000" />
 					</div>
 					<div class="input-range-wrapper">
-                        <div class="track"></div>
+						<div class="track"></div>
 						<input
 							type="range"
 							min="1000000"
@@ -38,21 +39,35 @@
 				<div class="calculator__body-wrapper">
 					<div class="title">Первоначальный взнос</div>
 					<div class="input">
-						<input type="number" id="total-percent" value="0" />
+						<input type="number" id="total-percent" value="0" min="10" max="60" />
 					</div>
 					<div class="input-range-wrapper">
-                        <div class="track"></div>
-						<input type="range" min="10" max="60" id="total-percent-range" value="0" class="input-range form-range" />
+						<div class="track"></div>
+						<input
+							type="range"
+							min="10"
+							max="60"
+							id="total-percent-range"
+							value="0"
+							class="input-range form-range"
+						/>
 					</div>
 				</div>
 				<div class="calculator__body-wrapper">
 					<div class="title">Срок лизинга</div>
 					<div class="input">
-						<input type="number" id="total-period" value="0" />
+						<input type="number" id="total-period" value="0" min="1" max="60" />
 					</div>
 					<div class="input-range-wrapper">
-                        <div class="track"></div>
-						<input type="range" min="1" max="60" id="total-period-range" value="0" class="input-range form-range" />
+						<div class="track"></div>
+						<input
+							type="range"
+							min="1"
+							max="60"
+							id="total-period-range"
+							value="0"
+							class="input-range form-range"
+						/>
 					</div>
 				</div>
 			</div>
@@ -63,9 +78,9 @@
 				</div>
 				<div class="calculator__final-item">
 					<div class="title">Ежемесячный платеж от</div>
-					<div class="value" id="monthly-paymant">0</div>
+					<div class="value" id="monthly-payment">0</div>
 				</div>
-				<button class="btn">Оставить заявку</button>
+				<button class="btn">Оформить заявку</button>
 			</div>
 		</div>
 
